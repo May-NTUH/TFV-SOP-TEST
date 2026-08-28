@@ -9,46 +9,33 @@
 <style>
   html { scroll-behavior: smooth; }
   body { font-family: "Noto Sans TC", "PingFang TC", sans-serif; }
-  .img-container { border: 1px solid #e5e7eb; border-radius: 0.5rem; overflow: hidden; background-color: #f9fafb; }
+  .img-container { border: 1px solid #E8DFD3; border-radius: 0.5rem; overflow: hidden; background-color: #F7F1E8; }
   .img-container img { width: 100%; height: auto; object-fit: contain; max-height: 420px; display:block; margin:0 auto; }
-  .nav-link.active { background-color: #eef2ff; color: #4338ca; font-weight: 600; }
-  .nav-link.active i.fa-chevron-right { color:#4338ca; }
+  .nav-link.active { background-color: #F5EDE1; color: #6B5642; font-weight: 600; }
+  .nav-link.active i.fa-chevron-right { color:#6B5642; }
   .version-hidden { display: none !important; }
-  code.tag { background:#e5e7eb; padding:0.1rem 0.4rem; border-radius:0.25rem; font-size:0.8em; }
+  code.tag { background:#E8DFD3; padding:0.1rem 0.4rem; border-radius:0.25rem; font-size:0.8em; }
   .fade-in { animation: fadeIn .25s ease-in; }
   @keyframes fadeIn { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
 </style>
 </head>
-<body class="bg-gray-50 leading-normal tracking-normal">
+<body class="bg-[#F7F1E8] leading-normal tracking-normal">
 
 <!-- Top Header -->
-<header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
+<header class="bg-[#8B6F56] text-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-3">
     <div class="flex items-center space-x-3">
-      <i class="fa-solid fa-microscope text-2xl"></i>
+      <i class="fa-solid fa-microscope text-3xl"></i>
       <div>
-        <h1 class="text-lg font-bold leading-tight">TissueFAXS Viewer 操作線上指南</h1>
-        <p class="text-[11px] text-indigo-200">Edit by Garfield &amp; Bear</p>
+        <h1 class="text-xl md:text-2xl font-bold leading-tight tracking-wide">TissueFAXS Viewer 操作線上指南</h1>
+        <p class="text-xs text-[#E4D9C8] mt-0.5">Edit by Garfield &amp; Bear</p>
       </div>
     </div>
 
-    <div class="flex items-center gap-3">
-      <!-- Version Switch -->
-      <div id="version-switch" class="bg-indigo-900/50 rounded-full p-1 flex text-sm">
-        <button data-version="bf" class="ver-btn px-4 py-1.5 rounded-full transition font-medium">明視野 BF 版</button>
-        <button data-version="if" class="ver-btn px-4 py-1.5 rounded-full transition font-medium">螢光 IF 版</button>
-      </div>
-      <div id="version-date" class="text-xs bg-indigo-800 px-3 py-1 rounded-full text-indigo-200 whitespace-nowrap">版本日期：20210805</div>
-    </div>
-  </div>
-
-  <!-- Visitor counter bar -->
-  <div class="bg-indigo-800/60 border-t border-indigo-600/50 text-indigo-100 text-xs">
-    <div class="max-w-7xl mx-auto px-4 py-1.5 flex items-center gap-2">
-      <i class="fa-solid fa-eye"></i>
-      <span>累積瀏覽人次：</span>
-      <span id="visitor-count" class="font-semibold text-white">載入中…</span>
-      <span class="text-indigo-300 ml-1" id="visitor-note"></span>
+    <!-- Version Switch -->
+    <div id="version-switch" class="bg-[#5C4A3A]/50 rounded-full p-1 flex text-sm">
+      <button data-version="bf" class="ver-btn px-4 py-1.5 rounded-full transition font-medium">明視野 BF 版</button>
+      <button data-version="if" class="ver-btn px-4 py-1.5 rounded-full transition font-medium">螢光 IF 版</button>
     </div>
   </div>
 </header>
@@ -57,46 +44,46 @@
 <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row gap-6">
 
   <!-- Sidebar Navigation -->
-  <aside class="w-full md:w-1/4 bg-white rounded-xl shadow-sm border border-gray-100 p-4 h-fit sticky top-24">
-    <h2 class="text-gray-500 font-semibold text-xs tracking-wider uppercase mb-3 px-2">SOP 導覽章節</h2>
+  <aside class="w-full md:w-1/4 bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-4 h-fit sticky top-24">
+    <h2 class="text-[#8B7A6C] font-semibold text-xs tracking-wider uppercase mb-3 px-2">SOP 導覽章節</h2>
     <nav id="nav-bf" class="space-y-1">
-      <a href="#bf-sec-1" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-folder-open mr-2 text-indigo-500"></i> 一、開啟軟體</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#bf-sec-1" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-folder-open mr-2 text-[#A98763]"></i> 一、開啟軟體</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
-      <a href="#bf-sec-2" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-file-import mr-2 text-indigo-500"></i> 二、開啟專案與選 Region</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#bf-sec-2" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-file-import mr-2 text-[#A98763]"></i> 二、開啟專案與選 Region</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
-      <a href="#bf-sec-3" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-sliders mr-2 text-indigo-500"></i> 三、功能鈕介紹</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#bf-sec-3" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-sliders mr-2 text-[#A98763]"></i> 三、功能鈕介紹</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
-      <a href="#bf-sec-4" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-image mr-2 text-indigo-500"></i> 四、影像轉檔說明</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#bf-sec-4" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-image mr-2 text-[#A98763]"></i> 四、影像轉檔說明</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
     </nav>
     <nav id="nav-if" class="space-y-1 version-hidden">
-      <a href="#if-sec-1" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-folder-open mr-2 text-teal-600"></i> 一、開啟軟體</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#if-sec-1" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-folder-open mr-2 text-[#B07B5C]"></i> 一、開啟軟體</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
-      <a href="#if-sec-2" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-file-import mr-2 text-teal-600"></i> 二、開啟專案與選 Region</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#if-sec-2" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-file-import mr-2 text-[#B07B5C]"></i> 二、開啟專案與選 Region</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
-      <a href="#if-sec-3" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-sliders mr-2 text-teal-600"></i> 三、功能鈕介紹（含螢光調整）</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#if-sec-3" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-sliders mr-2 text-[#B07B5C]"></i> 三、功能鈕介紹（含螢光調整）</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
-      <a href="#if-sec-4" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
-        <span><i class="fa-solid fa-image mr-2 text-teal-600"></i> 四、影像轉檔說明</span>
-        <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+      <a href="#if-sec-4" class="nav-link block px-3 py-2.5 rounded-lg text-sm text-[#5A4A3D] hover:bg-[#F0E6D8] flex items-center justify-between">
+        <span><i class="fa-solid fa-image mr-2 text-[#B07B5C]"></i> 四、影像轉檔說明</span>
+        <i class="fa-solid fa-chevron-right text-xs text-[#A8998A]"></i>
       </a>
     </nav>
 
-    <div class="mt-4 pt-4 border-t border-gray-100 text-[11px] text-gray-400 px-2 leading-relaxed">
+    <div class="mt-4 pt-4 border-t border-[#F0E6D8] text-[11px] text-[#A8998A] px-2 leading-relaxed">
       <p>提示：兩版差異主要在「功能鈕」與「影像匯出設定」，其餘操作流程相同。</p>
     </div>
   </aside>
@@ -104,113 +91,113 @@
   <!-- ============ BF CONTENT ============ -->
   <main id="content-bf" class="w-full md:w-3/4 space-y-8">
 
-    <section id="bf-sec-1" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="bf-sec-1" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-indigo-100 text-indigo-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F0E6D8] text-[#8B6F56] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
           一、開啟檔案
         </h3>
       </div>
       <div class="space-y-4">
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-500">
-          <p class="text-sm text-gray-700 font-medium">步驟說明</p>
-          <p class="text-sm text-gray-600 mt-1">於 <code class="tag">TissueFAXS Viewer</code> 資料夾中點選開啟 <code class="tag">TissueFAXS Viewer</code> 執行檔案（應用程式）。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#A98763]">
+          <p class="text-sm text-[#5A4A3D] font-medium">步驟說明</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">於 <code class="tag">TissueFAXS Viewer</code> 資料夾中點選開啟 <code class="tag">TissueFAXS Viewer</code> 執行檔案（應用程式）。</p>
         </div>
         <div class="img-container p-2 text-center">
           <img src="images/bf/step1_folder.png" alt="資料夾檔案列表" onerror="this.src='https://placehold.co/600x300?text=step1_folder.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 1-1：資料夾路徑與 TissueFAXS Viewer 執行檔標示</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 1-1：資料夾路徑與 TissueFAXS Viewer 執行檔標示</p>
         </div>
       </div>
     </section>
 
-    <section id="bf-sec-2" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="bf-sec-2" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-indigo-100 text-indigo-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F0E6D8] text-[#8B6F56] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
           二、開啟檔案與選取 Region
         </h3>
       </div>
       <div class="space-y-4">
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-500">
-          <p class="text-sm text-gray-700 font-medium">1. File → Open</p>
-          <p class="text-sm text-gray-600 mt-1">點選 <code class="tag">File</code> → <code class="tag">Open...</code> 選擇 <code class="tag">OOO.aqproj</code> 掃片檔案。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#A98763]">
+          <p class="text-sm text-[#5A4A3D] font-medium">1. File → Open</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">點選 <code class="tag">File</code> → <code class="tag">Open...</code> 選擇 <code class="tag">OOO.aqproj</code> 掃片檔案。</p>
           <div class="mt-2 text-xs text-amber-700 bg-amber-50 p-2 rounded border border-amber-200">
             <i class="fa-solid fa-triangle-exclamation mr-1"></i><strong>備註：</strong> 除備份檔案（<code class="tag">.BKP</code>，系統備份可直接刪除）外，請勿更動內容檔案配置。
           </div>
         </div>
         <div class="img-container p-2 text-center">
           <img src="images/bf/step2_open_file.png" alt="開啟檔案視窗" onerror="this.src='https://placehold.co/600x300?text=step2_open_file.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 2-1：開啟專案檔 (.aqproj) 與資料夾結構標示</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 2-1：開啟專案檔 (.aqproj) 與資料夾結構標示</p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-500">
-          <p class="text-sm text-gray-700 font-medium">2. 選擇欲處理的 region</p>
-          <p class="text-sm text-gray-600 mt-1">滑鼠於左側清單目標 region 點擊兩次即可載入影像。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#A98763]">
+          <p class="text-sm text-[#5A4A3D] font-medium">2. 選擇欲處理的 region</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">滑鼠於左側清單目標 region 點擊兩次即可載入影像。</p>
         </div>
         <div class="img-container p-2 text-center">
           <img src="images/bf/step2_select_region.png" alt="選擇 Region" onerror="this.src='https://placehold.co/600x300?text=step2_select_region.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 2-2：雙擊左側清單載入指定 Region</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 2-2：雙擊左側清單載入指定 Region</p>
         </div>
       </div>
     </section>
 
-    <section id="bf-sec-3" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="bf-sec-3" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-indigo-100 text-indigo-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F0E6D8] text-[#8B6F56] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
           三、功能鈕介紹
         </h3>
       </div>
       <div class="img-container p-2 text-center mb-4">
         <img src="images/bf/step3_toolbar.png" alt="功能鈕導覽圖" onerror="this.src='https://placehold.co/600x250?text=step3_toolbar.png';">
-        <p class="text-xs text-gray-500 mt-2">▲ 圖 3-1：頂部工具列功能配置圖</p>
+        <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 3-1：頂部工具列功能配置圖</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-indigo-600"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 影像檢視縮放功能鈕</div>
-          <p class="text-xs text-gray-600 mt-1">自訂縮放比例、100% 原尺寸 (1:1)、最佳觀察大小、全圖地圖顯示。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#7C6248]"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 影像檢視縮放功能鈕</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">自訂縮放比例、100% 原尺寸 (1:1)、最佳觀察大小、全圖地圖顯示。</p>
         </div>
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-indigo-600"><i class="fa-solid fa-border-all mr-1"></i> FOV 格線顯示</div>
-          <p class="text-xs text-gray-600 mt-1">開啟或關閉 Field of View 網格邊界。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#7C6248]"><i class="fa-solid fa-border-all mr-1"></i> FOV 格線顯示</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">開啟或關閉 Field of View 網格邊界。</p>
         </div>
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-indigo-600"><i class="fa-solid fa-crop-simple mr-1"></i> 樣本範圍裁切顯示</div>
-          <p class="text-xs text-gray-600 mt-1">顯示或遮罩樣本範圍外之區塊。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#7C6248]"><i class="fa-solid fa-crop-simple mr-1"></i> 樣本範圍裁切顯示</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">顯示或遮罩樣本範圍外之區塊。</p>
         </div>
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-indigo-600"><i class="fa-solid fa-ruler-horizontal mr-1"></i> 比例尺顯示</div>
-          <p class="text-xs text-gray-600 mt-1">開啟右下角比例尺（例如 400 μm）。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#7C6248]"><i class="fa-solid fa-ruler-horizontal mr-1"></i> 比例尺顯示</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">開啟右下角比例尺（例如 400 μm）。</p>
         </div>
       </div>
     </section>
 
-    <section id="bf-sec-4" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="bf-sec-4" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-indigo-100 text-indigo-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F0E6D8] text-[#8B6F56] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
           四、影像轉檔 SOP
         </h3>
       </div>
       <div class="space-y-6">
-        <div class="border rounded-lg p-4 bg-gray-50">
-          <h4 class="font-bold text-indigo-700 text-md mb-2">1. Export FOVs images（轉出單張或多張 FOVs 影像）</h4>
-          <ol class="list-decimal list-inside space-y-1 text-sm text-gray-700">
+        <div class="border rounded-lg p-4 bg-[#F7F1E8]">
+          <h4 class="font-bold text-[#8B6F56] text-md mb-2">1. Export FOVs images（轉出單張或多張 FOVs 影像）</h4>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-[#5A4A3D]">
             <li>選擇紅色標記旗幟，於影像視窗中點選欲個別轉檔之 FOVs（點選出現主旗 1 個＋副旗 8 個，九宮格排列）。</li>
             <li>點選 <code class="tag">Export</code> → <code class="tag">Export FOVs images</code>。</li>
             <li>設定存檔位置、檔名結構與圖片格式；選擇 All／Flags Only／Flags With Neighbors 決定輸出範圍。</li>
             <li>建議勾選 <code class="tag">Apply Illumination Correction</code>；可加上比例尺（無法指定大小）。</li>
-            <li>點選 <span class="bg-indigo-600 text-white px-2 py-0.5 rounded text-xs">Save</span> 完成輸出。</li>
+            <li>點選 <span class="bg-[#7C6248] text-white px-2 py-0.5 rounded text-xs">Save</span> 完成輸出。</li>
           </ol>
           <div class="img-container p-2 text-center mt-3">
             <img src="images/bf/step4_export_fov.png" alt="Export FOVs視窗" onerror="this.src='https://placehold.co/600x300?text=step4_export_fov.png';">
-            <p class="text-xs text-gray-500 mt-2">▲ 圖 4-1：Export FOVs Images 設定對話框與旗幟標記</p>
+            <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 4-1：Export FOVs Images 設定對話框與旗幟標記</p>
           </div>
-          <div class="mt-2 text-xs text-gray-500 bg-white p-2 rounded border">備註：FOVs 原始檔為 JPG；因包含拼接計算範圍，實際單張 FOVs 會比拼圖中顯示範圍稍大。</div>
+          <div class="mt-2 text-xs text-[#8B7A6C] bg-white p-2 rounded border">備註：FOVs 原始檔為 JPG；因包含拼接計算範圍，實際單張 FOVs 會比拼圖中顯示範圍稍大。</div>
         </div>
 
-        <div class="border rounded-lg p-4 bg-gray-50">
-          <h4 class="font-bold text-indigo-700 text-md mb-2">2. Export region overview – Export region（轉出單張完整拼接全圖）</h4>
-          <ol class="list-decimal list-inside space-y-1 text-sm text-gray-700">
+        <div class="border rounded-lg p-4 bg-[#F7F1E8]">
+          <h4 class="font-bold text-[#8B6F56] text-md mb-2">2. Export region overview – Export region（轉出單張完整拼接全圖）</h4>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-[#5A4A3D]">
             <li>點選 <code class="tag">Export</code> → <code class="tag">Export region overview</code>。</li>
             <li><strong>Basic 頁面：</strong>設定存檔位置、格式（JPG／BMP／PNG／TIFF）及影像壓縮程度；建議勾選 Apply Illumination Correction。</li>
             <li><strong>Advanced 頁面：</strong>可勾選 Scale bar（標記比例尺）與呈現 Subregions 框選範圍標示及面積。</li>
@@ -218,21 +205,21 @@
           </ol>
           <div class="img-container p-2 text-center mt-3">
             <img src="images/bf/step4_export_overview.png" alt="Export Region Overview視窗" onerror="this.src='https://placehold.co/600x300?text=step4_export_overview.png';">
-            <p class="text-xs text-gray-500 mt-2">▲ 圖 4-2：Export Region Overview 基本與進階設定</p>
+            <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 4-2：Export Region Overview 基本與進階設定</p>
           </div>
-          <div class="mt-2 text-xs text-gray-500 bg-white p-2 rounded border">備註：合適大小範圍內建議使用 JPG 做轉檔；Tiff 轉檔之照片顯示範圍可能與原先不同，後續需自行裁切。</div>
+          <div class="mt-2 text-xs text-[#8B7A6C] bg-white p-2 rounded border">備註：合適大小範圍內建議使用 JPG 做轉檔；Tiff 轉檔之照片顯示範圍可能與原先不同，後續需自行裁切。</div>
         </div>
 
-        <div class="border rounded-lg p-4 bg-gray-50">
-          <h4 class="font-bold text-indigo-700 text-md mb-2">3. Export region overview – Export only overviews from categories（轉出指定圈選範圍拼接全圖）</h4>
-          <ol class="list-decimal list-inside space-y-1 text-sm text-gray-700">
+        <div class="border rounded-lg p-4 bg-[#F7F1E8]">
+          <h4 class="font-bold text-[#8B6F56] text-md mb-2">3. Export region overview – Export only overviews from categories（轉出指定圈選範圍拼接全圖）</h4>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-[#5A4A3D]">
             <li>點選 <code class="tag">Subregions</code> → <code class="tag">Manage Categories</code>，輸入組別名稱並選擇框選線條顏色（不同組可分開輸出拼圖）。</li>
             <li>於 <code class="tag">Subregions</code> 選單點選分組名稱，使用固定框選工具或手動框選工具（Add PolyLine）於照片上繪製區塊。<br><span class="text-xs text-amber-600">＊繪製時只能選擇及顯示單一分組名稱。</span></li>
             <li>進入 <code class="tag">Export region overview</code>，選擇 <code class="tag">Export only overviews from categories</code>，於 Advanced 頁選擇欲輸出的組別後匯出。</li>
           </ol>
           <div class="img-container p-2 text-center mt-3">
             <img src="images/bf/step4_export_categories.png" alt="Categories轉檔說明" onerror="this.src='https://placehold.co/600x300?text=step4_export_categories.png';">
-            <p class="text-xs text-gray-500 mt-2">▲ 圖 4-3：圈選分組建立與特定區域全圖輸出</p>
+            <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 4-3：圈選分組建立與特定區域全圖輸出</p>
           </div>
         </div>
       </div>
@@ -242,91 +229,91 @@
   <!-- ============ IF CONTENT ============ -->
   <main id="content-if" class="w-full md:w-3/4 space-y-8 version-hidden">
 
-    <section id="if-sec-1" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="if-sec-1" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F2E3D5] text-[#95614A] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
           一、開啟檔案
         </h3>
       </div>
       <div class="space-y-4">
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
-          <p class="text-sm text-gray-700 font-medium">步驟說明</p>
-          <p class="text-sm text-gray-600 mt-1">於 <code class="tag">TissueFAXS Viewer</code> 資料夾中點選開啟 <code class="tag">TissueFAXS Viewer</code> 執行檔案（應用程式）。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#C08F6E]">
+          <p class="text-sm text-[#5A4A3D] font-medium">步驟說明</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">於 <code class="tag">TissueFAXS Viewer</code> 資料夾中點選開啟 <code class="tag">TissueFAXS Viewer</code> 執行檔案（應用程式）。</p>
         </div>
         <div class="img-container p-2 text-center">
           <img src="images/if/step1_folder.png" alt="資料夾檔案列表" onerror="this.src='https://placehold.co/600x300?text=step1_folder.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 1-1：資料夾路徑與 TissueFAXS Viewer 執行檔標示</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 1-1：資料夾路徑與 TissueFAXS Viewer 執行檔標示</p>
         </div>
       </div>
     </section>
 
-    <section id="if-sec-2" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="if-sec-2" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F2E3D5] text-[#95614A] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
           二、開啟檔案與選取 Region
         </h3>
       </div>
       <div class="space-y-4">
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
-          <p class="text-sm text-gray-700 font-medium">1. File → Open</p>
-          <p class="text-sm text-gray-600 mt-1">點選 <code class="tag">File</code> → <code class="tag">Open...</code> 選擇 <code class="tag">OOO.aqproj</code> 掃片檔案。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#C08F6E]">
+          <p class="text-sm text-[#5A4A3D] font-medium">1. File → Open</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">點選 <code class="tag">File</code> → <code class="tag">Open...</code> 選擇 <code class="tag">OOO.aqproj</code> 掃片檔案。</p>
           <div class="mt-2 text-xs text-amber-700 bg-amber-50 p-2 rounded border border-amber-200">
             <i class="fa-solid fa-triangle-exclamation mr-1"></i><strong>備註：</strong> 除備份檔案（<code class="tag">.BKP</code>，系統備份可直接刪除）外，請勿更動內容檔案配置。
           </div>
         </div>
         <div class="img-container p-2 text-center">
           <img src="images/if/step2_open_file.png" alt="開啟檔案視窗" onerror="this.src='https://placehold.co/600x300?text=step2_open_file.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 2-1：開啟專案檔 (.aqproj) 與資料夾結構標示</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 2-1：開啟專案檔 (.aqproj) 與資料夾結構標示</p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
-          <p class="text-sm text-gray-700 font-medium">2. 選擇欲處理的 region</p>
-          <p class="text-sm text-gray-600 mt-1">滑鼠於左側清單目標 region（如 SD Slide）點擊兩次即可載入螢光影像。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#C08F6E]">
+          <p class="text-sm text-[#5A4A3D] font-medium">2. 選擇欲處理的 region</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">滑鼠於左側清單目標 region（如 SD Slide）點擊兩次即可載入螢光影像。</p>
         </div>
         <div class="img-container p-2 text-center">
           <img src="images/if/step2_select_region.png" alt="選擇 Region" onerror="this.src='https://placehold.co/600x300?text=step2_select_region.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 2-2：雙擊左側清單載入指定 Region（SD Slide 範例）</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 2-2：雙擊左側清單載入指定 Region（SD Slide 範例）</p>
         </div>
       </div>
     </section>
 
-    <section id="if-sec-3" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="if-sec-3" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F2E3D5] text-[#95614A] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
           三、功能鈕介紹
         </h3>
       </div>
       <div class="img-container p-2 text-center mb-4">
         <img src="images/if/step3_toolbar.png" alt="功能鈕導覽圖" onerror="this.src='https://placehold.co/600x250?text=step3_toolbar.png';">
-        <p class="text-xs text-gray-500 mt-2">▲ 圖 3-1：頂部工具列功能配置圖</p>
+        <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 3-1：頂部工具列功能配置圖</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-teal-700"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 影像檢視縮放功能鈕</div>
-          <p class="text-xs text-gray-600 mt-1">自訂縮放比例、100% 原尺寸 (1:1)、最佳觀察大小、全圖地圖顯示。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#95614A]"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 影像檢視縮放功能鈕</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">自訂縮放比例、100% 原尺寸 (1:1)、最佳觀察大小、全圖地圖顯示。</p>
         </div>
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-teal-700"><i class="fa-solid fa-border-all mr-1"></i> FOV 格線顯示</div>
-          <p class="text-xs text-gray-600 mt-1">開啟或關閉 Field of View 網格邊界。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#95614A]"><i class="fa-solid fa-border-all mr-1"></i> FOV 格線顯示</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">開啟或關閉 Field of View 網格邊界。</p>
         </div>
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-teal-700"><i class="fa-solid fa-crop-simple mr-1"></i> 樣本範圍裁切顯示</div>
-          <p class="text-xs text-gray-600 mt-1">顯示或遮罩樣本範圍外之區塊。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#95614A]"><i class="fa-solid fa-crop-simple mr-1"></i> 樣本範圍裁切顯示</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">顯示或遮罩樣本範圍外之區塊。</p>
         </div>
-        <div class="p-3 border rounded-lg bg-gray-50">
-          <div class="font-bold text-sm text-teal-700"><i class="fa-solid fa-ruler-horizontal mr-1"></i> 比例尺顯示</div>
-          <p class="text-xs text-gray-600 mt-1">開啟右下角比例尺（例如 200 μm）。</p>
+        <div class="p-3 border rounded-lg bg-[#F7F1E8]">
+          <div class="font-bold text-sm text-[#95614A]"><i class="fa-solid fa-ruler-horizontal mr-1"></i> 比例尺顯示</div>
+          <p class="text-xs text-[#6B5C4E] mt-1">開啟右下角比例尺（例如 200 μm）。</p>
         </div>
       </div>
 
       <div class="border-t pt-4">
-        <h4 class="font-bold text-teal-700 text-md mb-3"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> 螢光專屬功能</h4>
+        <h4 class="font-bold text-[#95614A] text-md mb-3"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> 螢光專屬功能</h4>
 
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500 mb-3">
-          <p class="text-sm text-gray-700 font-medium">◎ 螢光顯示與亮度調整（Region Overlay）</p>
-          <ul class="text-sm text-gray-600 mt-1 list-disc list-inside space-y-1">
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#C08F6E] mb-3">
+          <p class="text-sm text-[#5A4A3D] font-medium">◎ 螢光顯示與亮度調整（Region Overlay）</p>
+          <ul class="text-sm text-[#6B5C4E] mt-1 list-disc list-inside space-y-1">
             <li>勾選各通道（DAPI／FITC／TEXAS／CY5 等）決定是否顯示螢光。</li>
             <li>可選擇螢光套色（Color），並用 Auto 或手動點擊 Range 調整強度。</li>
             <li>點擊 Range 開啟手動調整視窗：<strong>Lower 調高可降低 background</strong>；<strong>Upper 調低可增加 intensity</strong>。</li>
@@ -335,17 +322,17 @@
         </div>
         <div class="img-container p-2 text-center mb-3">
           <img src="images/if/step3_fluor_intensity.png" alt="螢光強度調整" onerror="this.src='https://placehold.co/600x260?text=step3_fluor_intensity.png';">
-          <p class="text-xs text-gray-500 mt-2">▲ 圖 3-2：螢光通道勾選、套色與強度手動調整</p>
+          <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 3-2：螢光通道勾選、套色與強度手動調整</p>
         </div>
 
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500 mb-3">
-          <p class="text-sm text-gray-700 font-medium">◎ Shading Correction</p>
-          <p class="text-sm text-gray-600 mt-1">螢光影像一般建議<strong class="text-red-600">不要</strong>開啟 Shading Correction（圖示「綠色 ON」代表<strong class="text-red-600">未開啟</strong>）。</p>
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#C08F6E] mb-3">
+          <p class="text-sm text-[#5A4A3D] font-medium">◎ Shading Correction</p>
+          <p class="text-sm text-[#6B5C4E] mt-1">螢光影像一般建議<strong class="text-red-600">不要</strong>開啟 Shading Correction（圖示「綠色 ON」代表<strong class="text-red-600">未開啟</strong>）。</p>
         </div>
 
-        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
-          <p class="text-sm text-gray-700 font-medium">◎ Z-stack 顯示（檔案包含 Z 軸內容才會出現）</p>
-          <ul class="text-sm text-gray-600 mt-1 list-disc list-inside space-y-1">
+        <div class="bg-[#F7F1E8] p-4 rounded-lg border-l-4 border-[#C08F6E]">
+          <p class="text-sm text-[#5A4A3D] font-medium">◎ Z-stack 顯示（檔案包含 Z 軸內容才會出現）</p>
+          <ul class="text-sm text-[#6B5C4E] mt-1 list-disc list-inside space-y-1">
             <li>按下開關鈕可啟用或關閉 Z 軸影像控制。</li>
             <li>拖動滑桿可選擇觀察不同 Z 軸影像。</li>
             <li>第 0 層為軟體將所有 Z 軸影像清楚部分結合成一張清晰之影像。</li>
@@ -354,34 +341,34 @@
       </div>
     </section>
 
-    <section id="if-sec-4" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <section id="if-sec-4" class="bg-white rounded-xl shadow-sm border border-[#F0E6D8] p-6">
       <div class="border-b pb-3 mb-4">
-        <h3 class="text-lg font-bold text-gray-800 flex items-center">
-          <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+        <h3 class="text-lg font-bold text-[#4A3B30] flex items-center">
+          <span class="bg-[#F2E3D5] text-[#95614A] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
           四、影像轉檔 SOP
         </h3>
       </div>
       <div class="space-y-6">
-        <div class="border rounded-lg p-4 bg-gray-50">
-          <h4 class="font-bold text-teal-700 text-md mb-2">1. Export FOVs images（轉出單張或多張非拼圖 FOVs 影像）</h4>
-          <ol class="list-decimal list-inside space-y-1 text-sm text-gray-700">
+        <div class="border rounded-lg p-4 bg-[#F7F1E8]">
+          <h4 class="font-bold text-[#95614A] text-md mb-2">1. Export FOVs images（轉出單張或多張非拼圖 FOVs 影像）</h4>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-[#5A4A3D]">
             <li>選擇紅色標記旗幟，於影像視窗中點選欲個別轉檔之 FOVs（主旗 1 個＋副旗 8 個，九宮格排列）。</li>
             <li>點選 <code class="tag">Export</code> → <code class="tag">Export FOVs images</code>。</li>
             <li>於「Please select what type of images you want to save」勾選 <strong>Overlay</strong>（多色螢光疊圖）和／或 <strong>Original</strong>（原始單色，可選 16-bit）。</li>
             <li>選擇 All／Flags Only／Flags With Neighbors 決定輸出範圍。</li>
             <li><strong class="text-red-600">螢光影像請勿勾選</strong> Apply Shading Correction；可加上比例尺。</li>
-            <li>點選 <span class="bg-teal-600 text-white px-2 py-0.5 rounded text-xs">Save</span> 完成輸出。</li>
+            <li>點選 <span class="bg-[#B07B5C] text-white px-2 py-0.5 rounded text-xs">Save</span> 完成輸出。</li>
           </ol>
           <div class="img-container p-2 text-center mt-3">
             <img src="images/if/step4_export_fov.png" alt="Export FOVs視窗" onerror="this.src='https://placehold.co/600x300?text=step4_export_fov.png';">
-            <p class="text-xs text-gray-500 mt-2">▲ 圖 4-1：Export FOVs Images 設定對話框（含 Overlay／Original 選項）</p>
+            <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 4-1：Export FOVs Images 設定對話框（含 Overlay／Original 選項）</p>
           </div>
-          <div class="mt-2 text-xs text-gray-500 bg-white p-2 rounded border">備註：多色螢光疊圖以當下勾選開啟的顏色為主，如需不同組合需更改顯示後分多次轉出；實際單張 FOVs 會比拼圖中顯示範圍稍大。</div>
+          <div class="mt-2 text-xs text-[#8B7A6C] bg-white p-2 rounded border">備註：多色螢光疊圖以當下勾選開啟的顏色為主，如需不同組合需更改顯示後分多次轉出；實際單張 FOVs 會比拼圖中顯示範圍稍大。</div>
         </div>
 
-        <div class="border rounded-lg p-4 bg-gray-50">
-          <h4 class="font-bold text-teal-700 text-md mb-2">2. Export region overview – Export region（轉出單張完整拼接全圖）</h4>
-          <ol class="list-decimal list-inside space-y-1 text-sm text-gray-700">
+        <div class="border rounded-lg p-4 bg-[#F7F1E8]">
+          <h4 class="font-bold text-[#95614A] text-md mb-2">2. Export region overview – Export region（轉出單張完整拼接全圖）</h4>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-[#5A4A3D]">
             <li>點選 <code class="tag">Export</code> → <code class="tag">Export region overview</code>。</li>
             <li><strong>Basic 頁面：</strong>可選擇 <strong>Export region overlay</strong>（輸出多色螢光疊圖）或 <strong>Export region channels</strong>（輸出單色螢光影像，8-bit／16-bit）。</li>
             <li>選擇 <strong>Export regions overviews</strong> 輸出全圖影像；<strong class="text-red-600">螢光影像 Apply Shading Correction 請勿勾選</strong>。</li>
@@ -390,21 +377,21 @@
           </ol>
           <div class="img-container p-2 text-center mt-3">
             <img src="images/if/step4_export_overview.png" alt="Export Region Overview視窗" onerror="this.src='https://placehold.co/600x300?text=step4_export_overview.png';">
-            <p class="text-xs text-gray-500 mt-2">▲ 圖 4-2：Export Region Overview（Overlay／Channel 輸出選項）</p>
+            <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 4-2：Export Region Overview（Overlay／Channel 輸出選項）</p>
           </div>
-          <div class="mt-2 text-xs text-gray-500 bg-white p-2 rounded border">備註：多色螢光疊圖以當下勾選開啟的顏色為主；Tiff 轉檔之照片顯示範圍可能與原先不同，後續需自行裁切。</div>
+          <div class="mt-2 text-xs text-[#8B7A6C] bg-white p-2 rounded border">備註：多色螢光疊圖以當下勾選開啟的顏色為主；Tiff 轉檔之照片顯示範圍可能與原先不同，後續需自行裁切。</div>
         </div>
 
-        <div class="border rounded-lg p-4 bg-gray-50">
-          <h4 class="font-bold text-teal-700 text-md mb-2">3. Export region overview – Export only overviews from categories（轉出指定圈選範圍拼接全圖）</h4>
-          <ol class="list-decimal list-inside space-y-1 text-sm text-gray-700">
+        <div class="border rounded-lg p-4 bg-[#F7F1E8]">
+          <h4 class="font-bold text-[#95614A] text-md mb-2">3. Export region overview – Export only overviews from categories（轉出指定圈選範圍拼接全圖）</h4>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-[#5A4A3D]">
             <li>點選 <code class="tag">Subregions</code> → <code class="tag">Manage Categories</code>，輸入組別名稱並選擇框選線條顏色。</li>
             <li>於 <code class="tag">Subregions</code> 選單點選分組名稱，使用固定框選工具或手動框選工具於照片上繪製區塊。<br><span class="text-xs text-amber-600">＊繪製時只能選擇及顯示單一分組名稱。</span></li>
             <li>進入 <code class="tag">Export region overview</code>，選擇 <code class="tag">Export only overviews from categories</code>，並可搭配 Overlay／Channel 輸出方式，於 Advanced 頁選擇欲輸出的組別後匯出。</li>
           </ol>
           <div class="img-container p-2 text-center mt-3">
             <img src="images/if/step4_export_categories.png" alt="Categories轉檔說明" onerror="this.src='https://placehold.co/600x300?text=step4_export_categories.png';">
-            <p class="text-xs text-gray-500 mt-2">▲ 圖 4-3：圈選分組建立與特定區域全圖輸出</p>
+            <p class="text-xs text-[#8B7A6C] mt-2">▲ 圖 4-3：圈選分組建立與特定區域全圖輸出</p>
           </div>
         </div>
       </div>
@@ -413,8 +400,28 @@
 
 </div>
 
-<footer class="text-center text-xs text-gray-400 py-6">
-  © TissueFAXS Viewer 操作線上指南 ・ 內部教學使用
+<!-- 底部資訊列：與頁首同一個 max-w-7xl 容器對齊，寬度會隨頁面自動同步縮放 -->
+<footer class="bg-white border-t border-[#EDE4D8] mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-[#8B7A6C]">
+      <span class="flex items-center gap-1.5">
+        <i class="fa-solid fa-eye text-[#B07B5C]"></i>
+        累積瀏覽人次：<span id="visitor-count" class="font-semibold text-[#5A4A3D]">載入中…</span>
+        <span id="visitor-note" class="text-[#A8998A]"></span>
+      </span>
+      <span class="flex items-center gap-1.5">
+        <i class="fa-solid fa-code-branch text-[#B07B5C]"></i>
+        <span id="version-date">版本日期：20210805</span>
+      </span>
+      <span class="flex items-center gap-1.5">
+        <i class="fa-solid fa-user-pen text-[#B07B5C]"></i>
+        網頁製作：Garfield &amp; Bear
+      </span>
+    </div>
+    <div class="text-xs text-[#A8998A] sm:text-right">
+      © TissueFAXS Viewer 操作線上指南 ・ 內部教學使用
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -431,8 +438,8 @@ function setVersion(v) {
   document.querySelectorAll('.ver-btn').forEach(btn => {
     const active = btn.dataset.version === v;
     btn.classList.toggle('bg-white', active);
-    btn.classList.toggle('text-indigo-700', active);
-    btn.classList.toggle('text-indigo-100', !active);
+    btn.classList.toggle('text-[#8B6F56]', active);
+    btn.classList.toggle('text-[#F0E6D8]', !active);
   });
   localStorage.setItem('tfv-version', v);
 }
